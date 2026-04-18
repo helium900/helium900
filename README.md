@@ -36,12 +36,11 @@
 
 ## 🌸 About Me
 
-> 🌱 Full-Stack Development & Advanced DSA  
-> 🧠 Problem Solving & System Thinking  
-> 💻 Building real-world impactful projects  
-> 🛠️ Exploring scalable architectures  
-> ⚡ Coffee + curiosity + consistency  
-
+- 🌱 Full-Stack Development & Advanced DSA  
+- 🧠 Problem Solving & System Thinking  
+- 💻 Building real-world impactful projects  
+- 🛠️ Exploring scalable architectures  
+- ⚡ Coffee + curiosity + consistency  
 ---
 
 ## 🎯 Current Goals
@@ -120,11 +119,10 @@
 
 ## 🏆 Mindset
 
-> 🧩 Break complex problems into simple solutions  
-> 📚 Learn daily  
-> ⚡ Consistency > motivation  
-> 🏗️ Build → Improve → Repeat  
-
+- 🧩 Break complex problems into simple solutions  
+- 📚 Learn daily  
+- ⚡ Consistency > motivation  
+- 🏗️ Build → Improve → Repeat  
 ---
 
 <p align="center">
