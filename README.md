@@ -30,20 +30,19 @@
 
 ## 🌸 About Me
 
-- 🌱 Currently mastering **Full-Stack Development** & **Advanced DSA**
-- 🧠 Strong focus on **Problem Solving & System Thinking**
-- 💻 Love building **real-world impactful projects**
-- 🛠️ Exploring **System Design & Scalable Architectures**
-- ⚡ Fun fact: I enjoy debugging more than writing code 😄
+  🌱 Currently mastering <b>Full-Stack Development</b> & <b>Advanced DSA</b> <br>
+  🧠 Obsessed with <b>Problem Solving</b> & <b>System Thinking</b> <br>
+  💻 Building <b>real-world impactful projects</b> that actually matter <br>
+  🛠️ Exploring <b>System Design</b> & <b>Scalable Architectures</b> <br>
+  ⚡ Runs on coffee ☕, curiosity 🤔, and questionable late-night decisions 🌙
 
 ---
 
 ## 🎯 Current Goals
 
-- 🚀 Crack top tech internships (Amazon-level grind 🔥)
-- 🧩 Become elite in DSA & competitive coding
-- 🌍 Build products that solve real-world problems
-
+- Cracking top tech roles  
+- Improving in DSA daily  
+- Building real-world projects  
 ---
 
 ## 🔗 My Repositories
@@ -59,7 +58,7 @@
 ## 🤝 Connect With Me
 
 <p>
-  <a href="https://www.linkedin.com/in/honeykumarparashar/" target="_blank">
+  <a href="https://www.linkedin.com/in/divyashish-negi-72641831b/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-Divyashish%20Negi-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
 </p>
@@ -71,15 +70,19 @@
 <p align="center">
   <img src="https://img.shields.io/badge/DSA-Problem%20Solving-1e90ff?style=for-the-badge" />
   <img src="https://img.shields.io/badge/OOP-Clean%20Code-1e90ff?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/DBMS-Data%20Handling-1e90ff?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Backend-API%20Development-1e90ff?style=for-the-badge" />
   <img src="https://img.shields.io/badge/System%20Design-Learning-1e90ff?style=for-the-badge" />
 </p>
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=c,cpp,java,python,js,html,css,react,nodejs,express,mysql,mongodb,vite,bootstrap,tailwind,git,github,figma,npm,postman&perline=10" />
-</p>
+<h3 align="center">🛠️ Tech Stack</h3>
 
----
+<p align="center">
+  <img 
+    src="https://skillicons.dev/icons?i=c,cpp,java,js,html,css,react,nodejs,express,mysql,mongodb,vite,bootstrap,tailwind,git,github,redux,npm,appwrite" 
+    alt="Tech Stack"
+    style="display:block; margin:auto; max-width:75%;"
+  />
+</p>
 
 ## 🚀 Featured Projects
 
