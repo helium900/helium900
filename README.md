@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=260&color=0:0f2027,50:1e3c72,100:2a5298&text=Divyashish%20Negi&fontColor=ffffff&fontAlignY=38&fontSize=56&desc=Crafting%20Logic%20into%20Impactful%20Digital%20Experiences&descAlignY=58&animation=fadeIn" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=260&color=0:0f2027,50:1e3c72,100:2a5298&text=Divyashish%20Negi&fontColor=ffffff&fontAlignY=38&fontSize=56&desc=From%20Concept%20to%20Code%20to%20Real%20Impact&descAlignY=58&animation=fadeIn" />
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=600&size=24&duration=2800&pause=900&color=4cc9f0&center=true&vCenter=true&width=820&lines=💡+Turning+Ideas+into+Reality;🚀+Full-Stack+Developer+in+Progress;🧠+DSA+Enthusiast+%7C+Problem+Solver;⚡+Building+Projects+That+Matter;🔥+Always+Learning,+Always+Improving" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=600&size=24&duration=2800&pause=900&color=4cc9f0&center=true&vCenter=true&width=820&lines=💡+From+Idea+→+Scalable+Solutions;🚀+Full-Stack+Developer+in+Progress;💻+Building+Real+World+Applications;🧠+DSA+%7C+Problem+Solver;⚡+Shipping+Projects,+Not+Just+Code;🔥+Consistent+Growth+Every+Day" />
 </p>
 
 <p align="center">
