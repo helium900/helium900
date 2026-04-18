@@ -87,10 +87,17 @@
 
 <p align="center">
   <a href="https://github.com/helium900/chat">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=helium900&repo=chat&theme=tokyonight&hide_border=true" />
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=helium900&repo=chat&theme=tokyonight&hide_border=true&cache_seconds=86400" />
   </a>
+
   <a href="https://github.com/helium900/my-todo">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=helium900&repo=my-todo&theme=tokyonight&hide_border=true" />
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=helium900&repo=my-todo&theme=tokyonight&hide_border=true&cache_seconds=86400" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/helium900/Currency-Converter">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=helium900&repo=Currency-Converter&theme=tokyonight&hide_border=true&cache_seconds=86400" />
   </a>
 </p>
 
