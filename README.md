@@ -57,7 +57,7 @@
 
 ## 🤝 Connect With Me
 
-<p>
+<p align="center">
   <a href="https://www.linkedin.com/in/divyashish-negi-72641831b/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-Divyashish%20Negi-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
