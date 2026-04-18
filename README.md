@@ -68,10 +68,10 @@
 ## 🛠️ Tech Stack & Tools
 
 <p align="center">
-  <img src="https://img.shields.io/badge/DSA-Problem%20Solving-1e90ff?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/OOP-Clean%20Code-1e90ff?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Backend-API%20Development-1e90ff?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/System%20Design-Learning-1e90ff?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/DSA-Problem%20Solving-22c55e?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/OOP-Clean%20Code-f97316?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Backend-API%20Development-eab308?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/System%20Design-Learning-6366f1?style=for-the-badge" />
 </p>
 
 <h3 align="center">🛠️ Tech Stack</h3>
@@ -120,11 +120,10 @@
 
 ## 🏆 Achievements & Mindset
 
-- 🧩 Consistent problem solver  
-- 📚 Lifelong learner  
-- ⚡ Strong believer in **discipline over motivation**  
-- 🏗️ Builder mindset: *Learn → Build → Improve → Repeat*
-
+- 🧩 I enjoy breaking down complex problems into simple solutions  
+- 📚 Learning is part of my daily routine  
+- ⚡ I focus on staying consistent rather than waiting for motivation  
+- 🏗️ I build things, improve them, and learn from the process  
 ---
 
 ## ✨ Daily Motivation
