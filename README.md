@@ -85,21 +85,26 @@
 
 ## 🚀 Featured Projects
 
-<p align="center">
-  <a href="https://github.com/helium900/chat">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=helium900&repo=chat&theme=tokyonight&hide_border=true&cache_seconds=86400" />
-  </a>
 
+<p>
+  <a href="https://github.com/helium900/chat-application">
+    <img width="400" src="https://github-readme-stats.vercel.app/api/pin/?username=helium900&repo=chat-application&theme=tokyonight&hide_border=true" />
+  </a>
+</p>
+
+<p>
   <a href="https://github.com/helium900/my-todo">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=helium900&repo=my-todo&theme=tokyonight&hide_border=true&cache_seconds=86400" />
+    <img width="400" src="https://github-readme-stats.vercel.app/api/pin/?username=helium900&repo=my-todo&theme=tokyonight&hide_border=true" />
   </a>
 </p>
 
-<p align="center">
+<p>
   <a href="https://github.com/helium900/Currency-Converter">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=helium900&repo=Currency-Converter&theme=tokyonight&hide_border=true&cache_seconds=86400" />
+    <img width="400" src="https://github-readme-stats.vercel.app/api/pin/?username=helium900&repo=Currency-Converter&theme=tokyonight&hide_border=true" />
   </a>
 </p>
+
+
 
 ---
 
