@@ -88,19 +88,22 @@
 
 <p align="center">
   <a href="https://github.com/helium900/chat-application">
-    <img width="340" src="https://github-readme-stats.vercel.app/api/pin/?username=helium900&repo=chat-application&theme=tokyonight&hide_border=true&description_lines_count=2" />
+    <img width="300" src="https://github-readme-stats.vercel.app/api/pin/?username=helium900&repo=chat-application&theme=tokyonight&hide_border=true&description_lines_count=2" />
   </a>
-  &nbsp;&nbsp;&nbsp;
+</p>
+
+<p align="center">
   <a href="https://github.com/helium900/my-todo">
-    <img width="340" src="https://github-readme-stats.vercel.app/api/pin/?username=helium900&repo=my-todo&theme=tokyonight&hide_border=true&description_lines_count=2" />
+    <img width="300" src="https://github-readme-stats.vercel.app/api/pin/?username=helium900&repo=my-todo&theme=tokyonight&hide_border=true&description_lines_count=2" />
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/helium900/Currency-Converter">
-    <img width="340" src="https://github-readme-stats.vercel.app/api/pin/?username=helium900&repo=Currency-Converter&theme=tokyonight&hide_border=true&description_lines_count=2" />
+    <img width="300" src="https://github-readme-stats.vercel.app/api/pin/?username=helium900&repo=Currency-Converter&theme=tokyonight&hide_border=true&description_lines_count=2" />
   </a>
 </p>
+
 
 ---
 
