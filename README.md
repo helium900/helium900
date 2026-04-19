@@ -1,26 +1,26 @@
-<!-- HERO (DYNAMIC COLOR EFFECT) -->
+<!-- HERO -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=320&section=header&text=Divyashish%20Negi&fontSize=72&fontAlignY=38&desc=From%20Concept%20to%20Code%20to%20Real%20Impact&descAlignY=62&color=0:0f2027,50:1e3c72,100:2a5298&animation=fadeIn&fontColor=ffffff&descColor=ffffff" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=320&section=header&text=Divyashish%20Negi&fontSize=72&fontAlignY=38&desc=From%20Concept%20to%20Code%20to%20Real%20Impact&descAlignY=62&color=0:0f2027,50:4facfe,100:8e2de2&animation=fadeIn&fontColor=ffffff&descColor=ffffff" />
 </p>
 
-<!-- TYPING (COLOR CHANGES EFFECT) -->
+<!-- TYPING -->
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=700&size=26&duration=2500&pause=700&color=00C2FF&center=true&vCenter=true&width=900&lines=💡+From+Idea+→+Scalable+Solutions;🚀+Full-Stack+Developer;🧠+Problem+Solver;⚡+Consistency+Over+Motivation" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=700&size=26&duration=2500&pause=700&color=4FACFE&center=true&vCenter=true&width=900&lines=💡+From+Idea+→+Scalable+Solutions;🚀+Full-Stack+Developer;🧠+Problem+Solver;⚡+Consistency+Over+Motivation" />
 </p>
 
 <br>
 
 <!-- STATS -->
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=helium900&label=PROFILE%20VIEWS&style=for-the-badge&color=2563eb" height="45"/>
-  <img src="https://img.shields.io/github/followers/helium900?label=FOLLOWERS&style=for-the-badge&color=2563eb&logo=github" height="45"/>
-  <img src="https://img.shields.io/github/stars/helium900?label=STARS&style=for-the-badge&color=2563eb&logo=github" height="45"/>
+  <img src="https://komarev.com/ghpvc/?username=helium900&label=PROFILE%20VIEWS&style=for-the-badge&color=4facfe" height="45"/>
+  <img src="https://img.shields.io/github/followers/helium900?label=FOLLOWERS&style=for-the-badge&color=4facfe&logo=github" height="45"/>
+  <img src="https://img.shields.io/github/stars/helium900?label=STARS&style=for-the-badge&color=4facfe&logo=github" height="45"/>
 </p>
 
 <!-- CONNECT -->
 <p align="center">
   <a href="https://www.linkedin.com/in/divyashish-negi-72641831b/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" height="50"/>
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-4facfe?style=for-the-badge&logo=linkedin&logoColor=white" height="50"/>
   </a>
 </p>
 
@@ -41,6 +41,7 @@
 - 💻 Building real-world impactful projects  
 - 🛠️ Exploring scalable architectures  
 - ⚡ Coffee + curiosity + consistency  
+
 ---
 
 ## 🎯 Current Goals
@@ -55,7 +56,7 @@
 
 <p align="center">
   <a href="https://github.com/helium900?tab=repositories">
-    <img src="https://img.shields.io/badge/Explore%20Repositories-GitHub-2563eb?style=for-the-badge&logo=github&logoColor=white" height="45"/>
+    <img src="https://img.shields.io/badge/Explore%20Repositories-GitHub-4facfe?style=for-the-badge&logo=github&logoColor=white" height="45"/>
   </a>
 </p>
 
@@ -64,10 +65,10 @@
 ## 🛠️ Tech Stack & Tools
 
 <p align="center">
-  <img src="https://img.shields.io/badge/DSA-Problem%20Solving-22c55e?style=for-the-badge&logo=codeforces&logoColor=white" height="45"/>
-  <img src="https://img.shields.io/badge/OOP-Clean%20Code-f97316?style=for-the-badge&logo=cplusplus&logoColor=white" height="45"/>
-  <img src="https://img.shields.io/badge/Backend-API%20Development-eab308?style=for-the-badge&logo=node.js&logoColor=black" height="45"/>
-  <img src="https://img.shields.io/badge/System%20Design-Scalable%20Systems-6366f1?style=for-the-badge&logo=databricks&logoColor=white" height="45"/>
+  <img src="https://img.shields.io/badge/DSA-Problem%20Solving-22c55e?style=for-the-badge" height="45"/>
+  <img src="https://img.shields.io/badge/OOP-Clean%20Code-8e2de2?style=for-the-badge" height="45"/>
+  <img src="https://img.shields.io/badge/Backend-API%20Development-4facfe?style=for-the-badge" height="45"/>
+  <img src="https://img.shields.io/badge/System%20Design-Scalable%20Systems-6366f1?style=for-the-badge" height="45"/>
 </p>
 
 ---
@@ -85,7 +86,6 @@
 
 ## 🚀 Featured Projects
 
-
 <p align="center">
   <a href="https://github.com/helium900/chat-application">
     <img width="340" src="https://github-readme-stats.vercel.app/api/pin/?username=helium900&repo=chat-application&theme=tokyonight&hide_border=true&description_lines_count=2" />
@@ -101,7 +101,6 @@
     <img width="340" src="https://github-readme-stats.vercel.app/api/pin/?username=helium900&repo=Currency-Converter&theme=tokyonight&hide_border=true&description_lines_count=2" />
   </a>
 </p>
-
 
 ---
 
@@ -132,6 +131,7 @@
 - 📚 Learn daily  
 - ⚡ Consistency > motivation  
 - 🏗️ Build → Improve → Repeat  
+
 ---
 
 <p align="center">
@@ -140,6 +140,7 @@
 
 ---
 
+<!-- FOOTER -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&section=footer&height=140&color=0:1e3c72,50:2a5298,100:4facfe" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&section=footer&height=140&color=0:0f2027,50:4facfe,100:8e2de2" />
 </p>
