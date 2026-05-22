@@ -83,50 +83,55 @@
 </p>
 
 ---
+## 📈 GitHub Stats
+
+<p align="center">
+  <img
+    src="https://github-readme-stats-sigma-five.vercel.app/api?username=helium900&show_icons=true&theme=tokyonight"
+    height="180"
+  />
+</p>
+
+
+---
+
+## 🔥 language used
+
+ <p align ="center" >
+  <img
+    src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=helium900&layout=compact&theme=tokyonight"
+    height="180"
+  />
+ </p>
+
+ 
+---
 
 ## 🚀 Featured Projects
 
 <p align="center">
-  <a href="https://github.com/helium900/chat-application">
-    <img width="300" src="https://github-readme-stats.vercel.app/api/pin/?username=helium900&repo=chat-application&theme=tokyonight&hide_border=true&description_lines_count=2" />
-  </a>
+
+<a href="https://github.com/helium900/chat-application">
+  <img
+    src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=helium900&repo=chat-application&theme=tokyonight"
+  />
+</a>
+
+<a href="https://github.com/helium900/my-todo">
+  <img
+    src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=helium900&repo=my-todo&theme=tokyonight"
+  />
+</a>
+
+<a href="https://github.com/helium900/Currency-Converter">
+  <img
+    src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=helium900&repo=Currency-Converter&theme=tokyonight"
+  />
+</a>
+
 </p>
 
-<p align="center">
-  <a href="https://github.com/helium900/my-todo">
-    <img width="300" src="https://github-readme-stats.vercel.app/api/pin/?username=helium900&repo=my-todo&theme=tokyonight&hide_border=true&description_lines_count=2" />
-  </a>
-</p>
 
-<p align="center">
-  <a href="https://github.com/helium900/Currency-Converter">
-    <img width="300" src="https://github-readme-stats.vercel.app/api/pin/?username=helium900&repo=Currency-Converter&theme=tokyonight&hide_border=true&description_lines_count=2" />
-  </a>
-</p>
-
-
----
-
-## 📈 GitHub Analytics
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=helium900&show_icons=true&theme=tokyonight&hide_border=true" height="180"/>
-  <img src="https://streak-stats.demolab.com/?user=helium900&theme=tokyonight&hide_border=true" height="180"/>
-</p>
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=helium900&layout=compact&theme=tokyonight&hide_border=true" height="240"/>
-</p>
-
----
-
-## 📊 Activity Graph
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=helium900&theme=tokyo-night&hide_border=true&area=true" />
-</p>
-
----
 
 ## 🏆 Mindset
 
