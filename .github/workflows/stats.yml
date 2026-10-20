@@ -18,230 +18,123 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout profile repo
         uses: actions/checkout@v4
 
-      - name: Generate All Cards
+      - name: Generate six SVG cards
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python3 - <<'PYCODE'
+          mkdir -p profile
+          python3 - <<'PY'
           import json
           import os
-          import textwrap
           from collections import Counter
           from html import escape
           from pathlib import Path
-          from urllib.error import HTTPError, URLError
           from urllib.parse import quote
           from urllib.request import Request, urlopen
 
-          USERNAME = "helium900"
-          TOKEN = os.environ["GH_TOKEN"]
-
-          OUT = Path("profile")
-          OUT.mkdir(parents=True, exist_ok=True)
+          USER = 'helium900'
+          DEST = Path('profile')
+          DEST.mkdir(exist_ok=True)
+          token = os.environ['GITHUB_TOKEN']
 
           def api(path):
-              request = Request(
-                  "https://api.github.com" + path,
-                  headers={
-                      "Authorization": "Bearer " + TOKEN,
-                      "Accept": "application/vnd.github+json",
-                      "X-GitHub-Api-Version": "2022-11-28",
-                      "User-Agent": "profile-card-generator",
-                  },
-              )
-              try:
-                  with urlopen(request, timeout=25) as response:
-                      return json.load(response)
-              except HTTPError as error:
-                  message = error.read(400).decode("utf-8", "replace")
-                  raise RuntimeError(
-                      f"GitHub API {path}: HTTP {error.code}: {message}"
-                  ) from error
-              except URLError as error:
-                  raise RuntimeError(
-                      f"GitHub API network failure: {error}"
-                  ) from error
+              req = Request('https://api.github.com' + path, headers={
+                  'Accept': 'application/vnd.github+json',
+                  'Authorization': 'Bearer ' + token,
+                  'User-Agent': 'profile-cards-action',
+              })
+              with urlopen(req, timeout=30) as r:
+                  return json.load(r)
 
-          def label(x, y, value, size=17,
-                    color="#c9d1d9", weight="normal"):
-              return (
-                  f'<text x="{x}" y="{y}" fill="{color}" '
-                  f'font-size="{size}" '
-                  f'font-family="Arial, sans-serif" '
-                  f'font-weight="{weight}">'
-                  f'{escape(str(value))}</text>'
-              )
+          def text(x, y, s, size=17, color='#c9d1d9'):
+              return (f'<text x="{x}" y="{y}" fill="{color}" '
+                      f'font-family="Arial,sans-serif" font-size="{size}">'
+                      f'{escape(str(s))}</text>')
 
-          def save(filename, title, content, height=185):
-              svg = (
-                  f'<svg xmlns="http://www.w3.org/2000/svg" '
-                  f'width="500" height="{height}" '
-                  f'viewBox="0 0 500 {height}">'
-                  '<rect x="1" y="1" width="498" '
-                  'height="99%" rx="14" fill="#0d1117" '
-                  'stroke="#30363d" stroke-width="2"/>'
-                  f'{label(25, 43, title, 22, "#58a6ff", "bold")}'
-                  + "".join(content)
-                  + "</svg>"
-              )
-              (OUT / filename).write_text(svg, encoding="utf-8")
-              print("Created", OUT / filename)
+          def svg(name, title, contents, height=190):
+              out = (f'<svg xmlns="http://www.w3.org/2000/svg" '
+                     f'width="495" height="{height}" viewBox="0 0 495 {height}">'
+                     f'<rect x="1" y="1" width="493" height="{height-2}" '
+                     f'rx="14" fill="#0d1117" stroke="#30363d"/>'
+                     + text(23, 42, title, 23, '#58a6ff')
+                     + ''.join(contents) + '</svg>')
+              (DEST / name).write_text(out, encoding='utf-8')
+              print('Generated:', DEST / name)
 
-          # GitHub profile information
-          user = api(f"/users/{USERNAME}")
-
+          user = api('/users/' + USER)
           repos = []
-          for page in range(1, 11):
-              batch = api(
-                  f"/users/{USERNAME}/repos"
-                  f"?type=owner&per_page=100&page={page}"
-              )
-              repos.extend(
-                  repo for repo in batch
-                  if not repo.get("fork")
-              )
-              if len(batch) < 100:
+          for page in range(1, 4):
+              page_repos = api(f'/users/{USER}/repos?per_page=100&page={page}&type=owner')
+              repos.extend(r for r in page_repos if not r.get('fork', False))
+              if len(page_repos) < 100:
                   break
 
-          # GitHub stats card
-          metrics = [
-              ("Public repositories",
-               user.get("public_repos", len(repos))),
-              ("Stars received",
-               sum(r.get("stargazers_count", 0) for r in repos)),
-              ("Followers", user.get("followers", 0)),
-              ("Following", user.get("following", 0)),
-          ]
+          stars = sum(r.get('stargazers_count', 0) for r in repos)
+          svg('stats.svg', 'GitHub Stats', [
+              text(25, 96, f'Public repositories: {user.get("public_repos", 0)}'),
+              text(25, 123, f'Total public repo stars: {stars}'),
+              text(25, 150, f'Followers: {user.get("followers", 0)}'),
+              text(25, 177, f'Following: {user.get("following", 0)}'),
+          ], 205)
 
-          body = []
-          for index, (name, value) in enumerate(metrics):
-              x = 27 + (index % 2) * 239
-              y = 99 + (index // 2) * 75
-              body += [
-                  label(x, y, value, 30, "#f0f6fc", "bold"),
-                  label(x, y + 23, name, 14),
-              ]
-
-          save("stats.svg", "GitHub Stats", body, 226)
-
-          # Most used languages by GitHub-detected bytes
           languages = Counter()
-
           for repo in repos:
-              repo_name = quote(repo["name"], safe="")
+              name = quote(repo['name'], safe='')
               try:
-                  languages.update(
-                      api(f"/repos/{USERNAME}/{repo_name}/languages")
-                  )
-              except RuntimeError as error:
-                  print("Language data warning:", error)
-
-          if not languages:
-              raise RuntimeError(
-                  "No GitHub language data available"
-              )
+                  languages.update(api(f'/repos/{USER}/{name}/languages'))
+              except Exception as e:
+                  print('Skipped language fetch:', repo['name'], str(e))
 
           total = sum(languages.values())
-          body = []
-
-          for index, (name, count) in enumerate(
-              languages.most_common(6)
-          ):
-              y = 83 + index * 33
-              percent = count / total * 100
-
-              body += [
-                  label(26, y, name, 14),
-                  label(425, y, f"{percent:.1f}%", 13),
-              ]
-
-              body.append(
-                  f'<rect x="26" y="{y + 8}" width="448" '
-                  'height="9" rx="4" fill="#21262d"/>'
+          language_rows = []
+          for i, (lang, size) in enumerate(languages.most_common(6)):
+              y = 78 + i * 34
+              pct = size / total * 100 if total else 0
+              language_rows.append(text(25, y, f'{lang}: {pct:.1f}%', 15))
+              language_rows.append(
+                  f'<rect x="25" y="{y+6}" width="445" height="8" rx="4" fill="#30363d"/>'
+                  f'<rect x="25" y="{y+6}" width="{445*size/total:.1f}" '
+                  f'height="8" rx="4" fill="#58a6ff"/>'
               )
+          if not language_rows:
+              language_rows.append(text(25, 91, 'No language data available yet'))
+          svg('languages.svg', 'Most Used Languages', language_rows, 295)
 
-              body.append(
-                  f'<rect x="26" y="{y + 8}" '
-                  f'width="{max(3, 448 * count / total):.1f}" '
-                  'height="9" rx="4" fill="#58a6ff"/>'
-              )
-
-          save(
-              "languages.svg",
-              "Most Used Languages",
-              body,
-              292,
-          )
-
-          # Four featured project cards
           projects = [
-              ("chat-application", "chat.svg",
-               "Chat Application"),
-              ("my-todo", "todo.svg",
-               "Todo Application"),
-              ("Currency-Converter", "currency.svg",
-               "Currency Converter"),
-              ("portfolio", "portfolio.svg",
-               "Portfolio"),
+              ('chat-application', 'chat.svg', 'Chat Application'),
+              ('my-todo', 'todo.svg', 'Todo Application'),
+              ('Currency-Converter', 'currency.svg', 'Currency Converter'),
+              ('portfolio', 'portfolio.svg', 'Portfolio'),
           ]
+          for repo_name, filename, heading in projects:
+              repo = next((r for r in repos if r['name'].lower() == repo_name.lower()), None)
+              if repo is None:
+                  try:
+                      repo = api(f'/repos/{USER}/{quote(repo_name)}')
+                  except Exception as e:
+                      print('Missing repo details:', repo_name, str(e))
+                      repo = {}
+              description = (repo.get('description') or 'View project on GitHub').strip()
+              description = description[:52] + ('...' if len(description) > 52 else '')
+              svg(filename, heading, [
+                  text(25, 91, description, 15),
+                  text(25, 134, 'Stars: ' + str(repo.get('stargazers_count', 0))),
+                  text(160, 134, 'Forks: ' + str(repo.get('forks_count', 0))),
+                  text(25, 166, 'Language: ' + str(repo.get('language') or 'Not specified'), 15, '#79c0ff'),
+              ], 190)
+          PY
 
-          for repo_name, filename, display_name in projects:
-              info = api(
-                  f"/repos/{USERNAME}/{quote(repo_name, safe='')}"
-              )
-
-              description = (
-                  info.get("description")
-                  or "View this project on GitHub"
-              )
-
-              lines = textwrap.wrap(
-                  description,
-                  width=55,
-                  break_long_words=False,
-              )[:2]
-
-              body = [
-                  label(25, 87 + i * 23, line, 15)
-                  for i, line in enumerate(lines)
-              ]
-
-              body.append(
-                  label(
-                      25,
-                      161,
-                      f'Stars: {info.get("stargazers_count", 0)}'
-                      f'   Forks: {info.get("forks_count", 0)}',
-                      14,
-                      "#79c0ff",
-                  )
-              )
-
-              if info.get("language"):
-                  body.append(
-                      label(
-                          340, 161, info["language"],
-                          14, "#a5d6ff"
-                      )
-                  )
-
-              save(filename, display_name, body, 189)
-
-          PYCODE
-
-      - name: Commit Generated Cards
+      - name: Commit SVGs to main
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
           git add profile/*.svg
-
-          if ! git diff --cached --quiet; then
-            git commit -m "Refresh GitHub profile cards"
-            git push origin HEAD:${GITHUB_REF_NAME}
+          if git diff --cached --quiet; then
+            echo "All cards are up to date"
           else
-            echo "Cards are already up to date"
+            git commit -m "Update profile cards"
+            git push origin HEAD:main
           fi
