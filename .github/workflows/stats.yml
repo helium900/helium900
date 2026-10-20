@@ -35,7 +35,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_error: true
 
-      - name: Generate Chat Application Card
+      - name: Generate Chat Application
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: pin
@@ -44,7 +44,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_error: true
 
-      - name: Generate Todo Card
+      - name: Generate Todo Application
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: pin
@@ -53,7 +53,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_error: true
 
-      - name: Generate Currency Converter Card
+      - name: Generate Currency Converter
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: pin
@@ -62,13 +62,23 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_error: true
 
+      - name: Generate Portfolio
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: pin
+          options: username=helium900&repo=portfolio&theme=tokyonight
+          path: profile/portfolio.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
+
       - name: Commit Generated Cards
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git add profile/*.svg
 
           if ! git diff --cached --quiet; then
-            git commit -m "Update GitHub profile stats"
+            git commit -m "Update GitHub profile cards"
             git push
           fi
